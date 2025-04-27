@@ -32,7 +32,7 @@ const upload = require('../utils/multer');
 const authMiddleware = require('../middleware/middleware');
 
 router.post('/', authMiddleware, upload.array('images', 5), createEvent);
-router.get('/', authMiddleware, getEvents);
+router.get('/', getEvents);
 router.delete('/:id', authMiddleware, deleteEvent);
 
 module.exports = router;
